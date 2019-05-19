@@ -20,7 +20,9 @@ brew install git
 ```
 
 ## 5. Add git bin to the $PATH
-Add `/usr/local/Cellar/git/2.5.0/bin` to the $PATH defined in `~/.bash_profile`
+```bash
+echo 'export PATH="/usr/local/Cellar/git/2.5.0/bin:$PATH"' >> ~/.bash_profile
+```
 
 ## 6. Install Node
 ```bash
