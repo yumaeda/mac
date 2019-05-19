@@ -26,3 +26,8 @@ Add `/usr/local/Cellar/git/2.5.0/bin` to the $PATH defined in `~/.bash_profile`
 ```bash
 brew install node
 ```
+
+## 7. Install Git Flow
+```bash
+brew install git-flow
+```
