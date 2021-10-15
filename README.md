@@ -18,3 +18,8 @@ brew install --cask chrome-remote-desktop-host
 ```zsh
 brew install --cask visual-studio-code
 ```
+
+## 5. Install Docker
+```zsh
+brew install docker
+```
