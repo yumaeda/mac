@@ -13,3 +13,8 @@ xcode-select --install
 ```zsh
 brew install --cask chrome-remote-desktop-host
 ```
+
+## 4. Install Visual Studio
+```zsh
+brew install --cask visual-studio-code
+```
