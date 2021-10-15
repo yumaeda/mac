@@ -11,5 +11,5 @@ xcode-select --install
 
 ## 3. Install Chrome
 ```zsh
-brew cask install google-chrome
+brew install --cask chrome-remote-desktop-host
 ```
