@@ -23,3 +23,8 @@ brew install --cask visual-studio-code
 ```zsh
 brew install --cask docker
 ```
+
+## 6. Install AWS Cli
+```zsh
+brew install awscli
+```
