@@ -28,3 +28,8 @@ brew install --cask docker
 ```zsh
 brew install awscli
 ```
+
+## 7. Configure Git
+```zsh
+git config --global pull.rebase false
+```
