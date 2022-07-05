@@ -31,6 +31,8 @@ brew install --cask visual-studio-code
 ## 5. Install Docker
 ```zsh
 brew install --cask docker
+
+open /Applications/Docker.app
 ```
 
 ## 6. Install AWS Cli
