@@ -35,12 +35,17 @@ brew install --cask docker
 open /Applications/Docker.app
 ```
 
-## 6. Install AWS Cli
+## 6. Install direnv
+```zsh
+brew install direnv
+```
+
+## 7. Install AWS Cli
 ```zsh
 brew install awscli
 ```
 
-## 7. Configure Git
+## 8. Configure Git
 ```zsh
 git config --global pull.rebase false
 ```
