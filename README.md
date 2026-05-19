@@ -1,20 +1,23 @@
 # Setting up Mac
-## 1. Install command line tools for Xcode
-```zsh
-xcode-select --install
-```
-
-## 2. Install Homebrew
+## 1. Install Homebrew
 ```zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Command line tools for Xcode is also installed
 
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-brew update
+```zsh
+echo >> ~/.zprofile
 ```
 
+```zsh
+echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> ~/.zprofile
+```
+
+```zsh
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+```
+
+# Old Steps
 ## 3. Install Node.js
 - `16.15.1 LTS`
 ```zsh
