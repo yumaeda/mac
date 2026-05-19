@@ -44,6 +44,49 @@ git config user.email "your-email.com"
 brew install --cask visual-studio-code
 ```
 
+## 5. Install OpenCode
+```zsh
+brew install anomalyco/tap/opencode
+
+```
+
+## 6. Ollama
+### Install
+```zsh
+brew install ollama
+```
+
+### Start Ollama
+```zsh
+brew services start ollama
+```
+
+### Stop Ollama
+```zsh
+brew services stop ollama
+```
+
+### Pull Manifests
+```zsh
+ollama pull gemma4:31b
+ollama pull batiai/qwen3.6-35b:q4
+```
+
+### List all downloaded models
+```zsh
+ollama list
+```
+
+### Launch the model locally
+```zsh
+ollama run $MODEL
+```
+
+### Unload the Model from Mac
+```zsh
+ollama stop $MODEL
+```
+
 # Old Steps
 ## 3. Install Node.js
 - `16.15.1 LTS`
