@@ -22,6 +22,17 @@ eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 brew install --cask google-chrome
 ```
 
+## 3. GitHub CLI
+### Install
+```zsh
+brew install gh
+```
+
+### Login
+```zsh
+gh auth login
+```
+
 # Old Steps
 ## 3. Install Node.js
 - `16.15.1 LTS`
