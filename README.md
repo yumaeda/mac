@@ -17,6 +17,11 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 ```
 
+## 2. Install Chrome
+```zsh
+brew install --cask google-chrome
+```
+
 # Old Steps
 ## 3. Install Node.js
 - `16.15.1 LTS`
