@@ -113,25 +113,3 @@ brew install direnv
 brew install jq
 ```
 
-## 8. Install AWS Cli
-```zsh
-brew install awscli
-```
-
-## 9. Configure Git
-```zsh
-git config --global pull.rebase false
-```
-
-&nbsp;
-
-# Misc
-## Install NVM
-```zsh
-brew install nvm
-mkdir ~/.nvm
-echo "export NVM_DIR=~/.nvm\nsource $(brew --prefix nvm)/nvm.sh" > ~/.zshrc
-source ~/.zshrc
-nvm install node
-nvm install 14
-```
