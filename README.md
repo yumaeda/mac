@@ -33,6 +33,12 @@ brew install gh
 gh auth login
 ```
 
+### Configure
+```zsh
+git config user.name "Your Name"
+git config user.email "your-email.com"
+```
+
 # Old Steps
 ## 3. Install Node.js
 - `16.15.1 LTS`
