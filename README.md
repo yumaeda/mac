@@ -39,6 +39,11 @@ git config user.name "Your Name"
 git config user.email "your-email.com"
 ```
 
+## 4. Install Visual Studio
+```zsh
+brew install --cask visual-studio-code
+```
+
 # Old Steps
 ## 3. Install Node.js
 - `16.15.1 LTS`
@@ -46,11 +51,6 @@ git config user.email "your-email.com"
 brew install node@16
 
 echo 'export PATH="/opt/homebrew/opt/node@16/bin:$PATH"' >> ~/.zshrc
-```
-
-## 4. Install Visual Studio
-```zsh
-brew install --cask visual-studio-code
 ```
 
 ## 5. Install Docker
