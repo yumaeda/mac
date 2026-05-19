@@ -61,6 +61,11 @@ brew install ollama
 brew services start ollama
 ```
 
+### Get Process
+```zsh
+ollama ps
+```
+
 ### Stop Ollama
 ```zsh
 brew services stop ollama
