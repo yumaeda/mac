@@ -98,15 +98,17 @@ ollama stop $MODEL
 brew install --cask claude-code
 ```
 
-### Enable auto-package update
+### Configure .zshrc
 ```zsh
 echo 'export CLAUDE_CODE_PACKAGE_MANAGER_AUTO_UPDATE=1' > ~/.zshrc
+echo 'export ANTHROPIC_BASE_URL="http://localhost:11434"' >> ~/.zshrc
+echo 'export ANTHROPIC_AUTH_TOKEN="ollama"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
 ### Launch
 ```zsh
-ollama launch claude --model $MODEL
+claude --model $MODEL
 ```
 
 # Old Steps
