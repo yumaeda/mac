@@ -92,6 +92,23 @@ ollama run $MODEL
 ollama stop $MODEL
 ```
 
+## Claude Code
+### Install
+```zsh
+brew install --cask claude-code
+```
+
+### Enable auto-package update
+```zsh
+echo 'export CLAUDE_CODE_PACKAGE_MANAGER_AUTO_UPDATE=1' > ~/.zshrc
+source ~/.zshrc
+```
+
+### Launch
+```zsh
+ollama launch claude --model $MODEL
+```
+
 # Old Steps
 ## 3. Install Node.js
 - `16.15.1 LTS`
