@@ -67,7 +67,6 @@ brew services stop ollama
 
 ### Pull Manifests
 ```zsh
-ollama pull gemma4:31b
 ollama pull batiai/qwen3.6-35b:q4
 ollama pull qwen3.5:35b-a3b-coding-nvfp4
 ```
