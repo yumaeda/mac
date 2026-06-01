@@ -44,12 +44,6 @@ git config user.email "your-email.com"
 brew install --cask visual-studio-code
 ```
 
-## 5. Install OpenCode
-```zsh
-brew install anomalyco/tap/opencode
-
-```
-
 ## 6. Ollama
 ### Install
 ```zsh
@@ -92,6 +86,36 @@ ollama run $MODEL
 ollama stop $MODEL
 ```
 
+## LiteLLM
+### Install
+```zsh
+brew install uv
+uv tool install --python 3.12 'litellm[proxy]' --force
+echo 'export PATH="/Users/yumaeda/.local/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+### Create the Config File (litellm_config.yaml) for Ollama in your workspace folder and paste below setup
+```zsh
+model_list:
+  - model_name: "*" # This catches ALL model names sent by Claude Code
+    litellm_params:
+      model: openai/batiai/qwen3.6-35b:q4
+      api_base: http://localhost:11434/v1
+      enable_tool_choice: true
+
+litellm_settings:
+  drop_params: true  # This strips out 'context_management' automatically
+  additional_drop_params: ["reasoning_effort", "reasoning.effort", "context_management"]
+  success_callback: []
+  failure_callback: []
+```
+
+### Run below command in a new Terminal
+```zsh
+litellm --config litellm_config.yaml --port 4000
+```
+
 ## Claude Code
 ### Install
 ```zsh
@@ -101,39 +125,12 @@ brew install --cask claude-code
 ### Configure .zshrc
 ```zsh
 echo 'export CLAUDE_CODE_PACKAGE_MANAGER_AUTO_UPDATE=1' > ~/.zshrc
-echo 'export ANTHROPIC_BASE_URL="http://localhost:11434"' >> ~/.zshrc
-echo 'export ANTHROPIC_AUTH_TOKEN="ollama"' >> ~/.zshrc
+echo 'export ANTHROPIC_BASE_URL="http://localhost:4000"' >> ~/.zshrc
+echo 'export ANTHROPIC_AUTH_TOKEN="local"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
 ### Launch
 ```zsh
-claude --model $MODEL
+claude
 ```
-
-# Old Steps
-## 3. Install Node.js
-- `16.15.1 LTS`
-```zsh
-brew install node@16
-
-echo 'export PATH="/opt/homebrew/opt/node@16/bin:$PATH"' >> ~/.zshrc
-```
-
-## 5. Install Docker
-```zsh
-brew install --cask docker
-
-open /Applications/Docker.app
-```
-
-## 6. Install direnv
-```zsh
-brew install direnv
-```
-
-## 7. Install jq
-```zsh
-brew install jq
-```
-
