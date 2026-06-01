@@ -105,5 +105,5 @@ source ~/.zshrc
 
 ### Launch
 ```zsh
-claude
+ollama launch claude --model $MODEL -- --context-limit 32000
 ```
