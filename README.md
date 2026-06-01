@@ -86,37 +86,6 @@ ollama run $MODEL
 ollama stop $MODEL
 ```
 
-## LiteLLM
-### Install
-```zsh
-brew install uv
-uv tool install --python 3.12 'litellm[proxy]' --force
-echo 'export PATH="/Users/yumaeda/.local/bin:$PATH"' >> ~/.zshrc
-echo 'export LITELLM_LOGGING="False"' >> ~/.zshrc
-source ~/.zshrc
-```
-
-### Create the Config File (litellm_config.yaml) for Ollama in your workspace folder and paste below setup
-```zsh
-model_list:
-  - model_name: "*" # This catches ALL model names sent by Claude Code
-    litellm_params:
-      model: openai/batiai/qwen3.6-35b:q4
-      api_base: http://localhost:11434/v1
-      enable_tool_choice: true
-
-litellm_settings:
-  drop_params: true  # This strips out 'context_management' automatically
-  additional_drop_params: ["reasoning_effort", "reasoning.effort", "context_management"]
-  success_callback: []
-  failure_callback: []
-```
-
-### Run below command in a new Terminal
-```zsh
-litellm --config litellm_config.yaml --port 4000
-```
-
 ## Claude Code
 ### Install
 ```zsh
@@ -126,8 +95,11 @@ brew install --cask claude-code
 ### Configure .zshrc
 ```zsh
 echo 'export CLAUDE_CODE_PACKAGE_MANAGER_AUTO_UPDATE=1' > ~/.zshrc
-echo 'export ANTHROPIC_BASE_URL="http://localhost:4000"' >> ~/.zshrc
-echo 'export ANTHROPIC_AUTH_TOKEN="local"' >> ~/.zshrc
+echo 'export OLLAMA_CONTEXT_LENGTH=65536' >> ~/.zshrc
+echo 'export ANTHROPIC_BASE_URL="http://localhost:11434/v1"' >> ~/.zshrc
+echo 'export ANTHROPIC_API_KEY=""' >> ~/.zshrc
+echo 'export ANTHROPIC_AUTH_TOKEN="ollama"' >> ~/.zshrc
+
 source ~/.zshrc
 ```
 
