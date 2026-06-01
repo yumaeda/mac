@@ -69,6 +69,7 @@ brew services stop ollama
 ```zsh
 ollama pull gemma4:31b
 ollama pull batiai/qwen3.6-35b:q4
+ollama pull qwen3.5:35b-a3b-coding-nvfp4
 ```
 
 ### List all downloaded models
@@ -96,6 +97,7 @@ brew install --cask claude-code
 ```zsh
 echo 'export CLAUDE_CODE_PACKAGE_MANAGER_AUTO_UPDATE=1' > ~/.zshrc
 echo 'export OLLAMA_CONTEXT_LENGTH=65536' >> ~/.zshrc
+echo 'export OLLAMA_NUM_CTX=32768' >> ~/.zshrc
 echo 'export ANTHROPIC_BASE_URL="http://localhost:11434/v1"' >> ~/.zshrc
 echo 'export ANTHROPIC_API_KEY=""' >> ~/.zshrc
 echo 'export ANTHROPIC_AUTH_TOKEN="ollama"' >> ~/.zshrc
@@ -105,5 +107,5 @@ source ~/.zshrc
 
 ### Launch
 ```zsh
-ollama launch claude --model $MODEL -- --context-limit 32000
+ollama launch claude --model $MODEL
 ```
