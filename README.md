@@ -92,6 +92,7 @@ ollama stop $MODEL
 brew install uv
 uv tool install --python 3.12 'litellm[proxy]' --force
 echo 'export PATH="/Users/yumaeda/.local/bin:$PATH"' >> ~/.zshrc
+echo 'export LITELLM_LOGGING="False"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
