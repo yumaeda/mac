@@ -22,7 +22,13 @@ eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 brew install --cask google-chrome
 ```
 
-## 3. GitHub CLI
+## 3. Install Docker
+```zsh
+brew install --cask docker
+
+```
+
+## 4. GitHub CLI
 ### Install
 ```zsh
 brew install gh
@@ -39,7 +45,7 @@ git config user.name "Your Name"
 git config user.email "your-email.com"
 ```
 
-## 4. Install Visual Studio
+## 5. Install Visual Studio
 ```zsh
 brew install --cask visual-studio-code
 ```
