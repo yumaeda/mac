@@ -74,7 +74,7 @@ brew services stop ollama
 ### Pull Manifests
 ```zsh
 ollama pull batiai/qwen3.6-35b:q4
-ollama pull qwen3.5:35b-a3b-coding-nvfp4
+ollama pull qwen3.6:35b-a3b-coding-nvfp4
 ```
 
 ### List all downloaded models
