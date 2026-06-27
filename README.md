@@ -100,11 +100,9 @@ brew install --cask claude-code
 
 ### Configure .zshrc
 ```zsh
-echo 'export CLAUDE_CODE_PACKAGE_MANAGER_AUTO_UPDATE=1' > ~/.zshrc
-echo 'export OLLAMA_CONTEXT_LENGTH=65536' >> ~/.zshrc
-echo 'export OLLAMA_NUM_CTX=32768' >> ~/.zshrc
+echo 'export CLAUDE_CODE_PACKAGE_MANAGER_AUTO_UPDATE=1' >> ~/.zshrc
+echo 'export OLLAMA_CONTEXT_LENGTH=32768' >> ~/.zshrc
 echo 'export ANTHROPIC_BASE_URL="http://localhost:11434/v1"' >> ~/.zshrc
-echo 'export ANTHROPIC_API_KEY=""' >> ~/.zshrc
 echo 'export ANTHROPIC_AUTH_TOKEN="ollama"' >> ~/.zshrc
 
 source ~/.zshrc
