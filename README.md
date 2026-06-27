@@ -92,6 +92,11 @@ ollama run $MODEL
 ollama stop $MODEL
 ```
 
+### Remove the Model from Mac
+```zsh
+ollama rm $MODEL
+```
+
 ## Claude Code
 ### Install
 ```zsh
