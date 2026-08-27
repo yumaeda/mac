@@ -50,7 +50,12 @@ git config user.email "your-email.com"
 brew install --cask visual-studio-code
 ```
 
-## 6. Ollama
+## 6. Install herdr
+```zsh
+brew install herdr
+```
+
+## 7. Ollama
 ### Install
 ```zsh
 brew install ollama
