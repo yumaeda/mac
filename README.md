@@ -55,6 +55,23 @@ brew install --cask visual-studio-code
 brew install herdr
 ```
 
+## 7. oMLX
+### Install
+```zsh
+brew tap jundot/omlx https://github.com/jundot/omlx
+brew install omlx
+```
+
+### Start oMLX
+```zsh
+brew services start jundot/omlx/omlx
+```
+
+### Stop oMLX
+```zsh
+brew services stop jundot/omlx/omlx
+```
+
 ## 7. Ollama
 ### Install
 ```zsh
