@@ -82,8 +82,9 @@ Download a model
 ### Configure .zshrc
 ```zsh
 echo 'export CLAUDE_CODE_ATTRIBUTION_HEADER="0"' >> ~/.zshrc
-echo 'export ANTHROPIC_BASE_URL="http://localhost:8000"' >> ~/.zshrc
+echo 'export ANTHROPIC_BASE_URL="http://localhost:8000/v1"' >> ~/.zshrc
 echo 'export ANTHROPIC_AUTH_TOKEN="local"' >> ~/.zshrc
+echo 'export ANTHROPIC_API_KEY="local"' >> ~/.zshrc
 echo 'export ANTHROPIC_DEFAULT_SONNET_MODEL="mlx-community/Qwen3.8-27B-mxfp4"' >> ~/.zshrc
 echo 'export ANTHROPIC_DEFAULT_OPUS_MODEL="mlx-community/Qwen3.8-27B-mxfp4"' >> ~/.zshrc
 source ~/.zshrc
@@ -91,7 +92,7 @@ source ~/.zshrc
 
 ### Launch Claude
 ```zsh
-claude
+omlx launch claude
 ```
 
 ### Stop oMLX
