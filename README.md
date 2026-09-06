@@ -55,7 +55,12 @@ brew install --cask visual-studio-code
 brew install herdr
 ```
 
-## 7. oMLX
+## 7. Install Claude Code
+```zsh
+brew install --cask claude-code
+```
+
+## 8. oMLX
 ### Install
 ```zsh
 brew tap jundot/omlx https://github.com/jundot/omlx
@@ -64,16 +69,38 @@ brew install omlx
 
 ### Start oMLX
 ```zsh
-brew services start jundot/omlx/omlx
+brew services start omlx
+```
+
+### Download Models
+Open admin dashboard
+```zsh
+open http://localhost:8000/admin
+```
+Download a model
+
+### Configure .zshrc
+```zsh
+echo 'export CLAUDE_CODE_ATTRIBUTION_HEADER="0"' >> ~/.zshrc
+echo 'export ANTHROPIC_BASE_URL="http://localhost:8000"' >> ~/.zshrc
+echo 'export ANTHROPIC_AUTH_TOKEN="local"' >> ~/.zshrc
+echo 'export ANTHROPIC_DEFAULT_SONNET_MODEL="mlx-community/Qwen3.8-27B-mxfp4"' >> ~/.zshrc
+echo 'export ANTHROPIC_DEFAULT_OPUS_MODEL="mlx-community/Qwen3.8-27B-mxfp4"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+### Launch Claude
+```zsh
+claude
 ```
 
 ### Stop oMLX
 ```zsh
-brew services stop jundot/omlx/omlx
+brew services stop omlx
 ```
 
-## 7. Ollama
-### Install
+# Use Ollama instead of oMLX
+## Install
 ```zsh
 brew install ollama
 ```
@@ -117,12 +144,6 @@ ollama stop $MODEL
 ### Remove the Model from Mac
 ```zsh
 ollama rm $MODEL
-```
-
-## Claude Code
-### Install
-```zsh
-brew install --cask claude-code
 ```
 
 ### Configure .zshrc
