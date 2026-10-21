@@ -77,16 +77,32 @@ Open admin dashboard
 ```zsh
 open http://localhost:8000/admin
 ```
-Download a model
+
+- Download models
+- Configure `Qwen3.6-35B-A3B-oQ4e-mtp`
+  - GENERATION DEFAULTS
+    - Context Window: 64536
+    - Temperature: 0.6
+    - Top P: 0.95
+    - Top K: 20
+    - Repetition Penalty: 1
+- ACCELERATION
+  - Lightning MTP: Enabled (Adaptive max depth: 3 tokens)
+- MEMORY SAVING
+  - KV cache compression: Enabled (BITS PER CHANNEL: 4-bit)
+- ADVANCED SETTINGS
+  - Chat Template Kwargs: CUSTOM (preserve_thinking: True)
+
 
 ### Configure .zshrc
 ```zsh
 echo 'export CLAUDE_CODE_ATTRIBUTION_HEADER="0"' >> ~/.zshrc
+echo 'export CLAUDE_CODE_CONTEXT_LIMIT="64000"' >> ~/.zshrc
 echo 'export ANTHROPIC_BASE_URL="http://localhost:8000/v1"' >> ~/.zshrc
 echo 'export ANTHROPIC_AUTH_TOKEN="local"' >> ~/.zshrc
 echo 'export ANTHROPIC_API_KEY="local"' >> ~/.zshrc
-echo 'export ANTHROPIC_DEFAULT_SONNET_MODEL="mlx-community/Qwen3.8-27B-mxfp4"' >> ~/.zshrc
-echo 'export ANTHROPIC_DEFAULT_OPUS_MODEL="mlx-community/Qwen3.8-27B-mxfp4"' >> ~/.zshrc
+echo 'export ANTHROPIC_DEFAULT_SONNET_MODEL="Qwen3.6-35B-A3B-oQ4e-mtp"' >> ~/.zshrc
+echo 'export ANTHROPIC_DEFAULT_OPUS_MODEL="LFM2.5-24B-A2B-MLX-4bit"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
