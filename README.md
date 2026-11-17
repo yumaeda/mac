@@ -60,7 +60,12 @@ brew install herdr
 brew install --cask claude-code
 ```
 
-## 8. oMLX
+## 8. Install Codex
+```zsh
+brew install --cask codex
+```
+
+## 9. oMLX
 ### Install
 ```zsh
 brew tap jundot/omlx https://github.com/jundot/omlx
@@ -109,6 +114,11 @@ source ~/.zshrc
 ### Launch Claude
 ```zsh
 omlx launch claude
+```
+
+### Launch Codex
+```zsh
+omlx launch codex
 ```
 
 ### Stop oMLX
